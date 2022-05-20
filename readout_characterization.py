@@ -154,7 +154,7 @@ def SYK_E_from_job(job,with_prerotations=False,readout_mitigate=False,part=None,
     if readout_mitigate or use_measure_H:
         E, dE = part.measure_H(counts,terms_measured,paulis,coeffs,uncorrelated,readout_mitigate=readout_mitigate)
     else:
-        E, dE = measure_H_unmitigated_with_uncertainty(counts,terms_measured,paulis,coeffs) # dE is not exact
+        E, dE = measure_H_unmitigated_with_uncertainty(counts,terms_measured,paulis,coeffs)
     return E, dE
     
 
