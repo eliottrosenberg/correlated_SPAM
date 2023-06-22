@@ -20,8 +20,8 @@ def pauli_product(pauliL,pauliR):
 
 
 def majorana(whichMajorana,N,encoding):
-    # e.g. whichMajorana = [5,3,2,0] means \chi_5 \chi_3 \chi_2 \chi_0
-    # whichPauli = [3,3,0,1] means Z_3 Z_2 I_1 X_0
+    # e.g. whichMajorana = [5,3,2,0] means \chi_0 \chi_2 \chi_3 \chi_5
+    # whichPauli = [3,3,0,1] means Z_0 Z_1 I_2 X_3
     # N is the number of fermions.
     # note: convention is that least significant bit is 0.
     
