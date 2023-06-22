@@ -29,9 +29,12 @@ def majorana(whichMajorana,N,encoding):
         whichMajorana = [whichMajorana]
     
     if encoding == 'jordan_wigner':
-        return jordan_wigner(whichMajorana,N)
+        pauli_op, coef =  jordan_wigner(whichMajorana,N)
     elif encoding == 'bravyi_kitaev':
-        return bravyi_kitaev(whichMajorana,N)
+        pauli_op, coef =  bravyi_kitaev(whichMajorana,N)
+    if len(pauli_op.shape) > 1:
+        pauli_op = pauli_op[0]
+    return pauli_op, coef
 
 def jordan_wigner(whichMajorana,N):
     # e.g. whichMajorana = [5,3,2,0] means \chi_5 \chi_3 \chi_2 \chi_0
