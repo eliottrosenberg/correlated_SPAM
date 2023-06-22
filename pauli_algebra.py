@@ -37,10 +37,6 @@ def majorana(whichMajorana,N,encoding):
     return pauli_op, coef
 
 def jordan_wigner(whichMajorana,N):
-    # e.g. whichMajorana = [5,3,2,0] means \chi_5 \chi_3 \chi_2 \chi_0
-    # whichPauli = [3,3,0,1] means Z_3 Z_2 I_1 X_0
-    # N is the number of fermions.
-    # note: convention is that least significant bit is 0.
     
     whichPaulis = np.zeros((len(whichMajorana),N//2),dtype=int)
     for i in range(len(whichMajorana)):
@@ -63,10 +59,6 @@ def jordan_wigner(whichMajorana,N):
 
 
 def bravyi_kitaev(whichMajorana,N):
-    # e.g. whichMajorana = [5,3,2,0] means \chi_5 \chi_3 \chi_2 \chi_0
-    # whichPauli = [3,3,0,1] means Z_3 Z_2 I_1 X_0
-    # N is the number of fermions.
-    # note: convention is that least significant bit is 0.
     
     def ones_str(num_ones):
         if num_ones >= 1:
